@@ -6,8 +6,9 @@ const BookItem = ({ book }) => {
         <div className="book-item item">
             <img className="ui image" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
             <div className="content">
-                <div className="header">{book.volumeInfo.title}</div>
-                <div>{book.volumeInfo.authors}</div>
+                <h2 className="header">{book.volumeInfo.title}</h2>
+                <h4>{book.volumeInfo.authors}</h4>
+                <p id="text">{book.volumeInfo.description}</p>
             </div>
 
         </div>
