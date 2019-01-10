@@ -10,7 +10,9 @@
     max-width: 180px;
 }
 
-.text {
+#text {
     text-align: justify !important;
+    font-family: 'Purple Purse', cursive;
+    
     
 }
