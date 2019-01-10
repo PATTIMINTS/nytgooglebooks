@@ -7,20 +7,26 @@ import SearchBar from "./components/SearchBar";
 
 // import Books from "./pages/Books";
 
-const App = () => {
-    return(
-        <div>
-        <Nav />
-        <div className="ui grid" id="center">
-            <div className="fourteen wide centered column">
-        <Jumbotron />
-        <SearchBar />
-        </div>
-        
-        </div>
-        </div>
-
-    );
+class App extends React.Component {
+        onTermSubmit = (term) => {
+            console.log(term);
+        };
+    render(){
+        return(
+            <div>
+            <Nav />
+            <div className="ui grid" id="center">
+                <div className="fourteen wide centered column">
+            <Jumbotron />
+            <SearchBar onFormSubmit={this.onTermSubmit} />
+            </div>
+            
+            </div>
+            </div>
+    
+        );
+    }
+    
 };
 
 export default App;
