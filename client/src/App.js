@@ -11,7 +11,8 @@ import BookList from "./components/BookList";
 // import Books from "./pages/Books";
 
 class App extends React.Component {
-        state= { books: [] }
+        state= { books: [], selectedBook: null };
+
         onTermSubmit = async term => {
         const response = await GoogleBooks.get("/search", {
                 params: {
@@ -19,6 +20,11 @@ class App extends React.Component {
                 }
             });
             this.setState({ books: response.data.items })
+        };
+
+        onBookSelect = book => {
+            console.log('From the App!', book);
+            this.setState({ selectedBook: book });
         };
     render(){
         return(
@@ -28,7 +34,7 @@ class App extends React.Component {
                 <div className="fourteen wide centered column">
             <Jumbotron />
             <SearchBar onFormSubmit={this.onTermSubmit} />
-            <BookList books={this.state.books} />
+            <BookList onBookSelect={this.onBookSelect}books={this.state.books} />
             
                 
             </div>
