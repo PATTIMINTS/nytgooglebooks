@@ -1,8 +1,10 @@
 import React from "react";
-import "../BookItem/BookItem.css"
+import "../BookItem/BookItem.css";
+
 
 
 const BookItem = ({ book, onBookSelect }) => {
+    
     return (
         
         <div className="book-item item">
@@ -10,9 +12,9 @@ const BookItem = ({ book, onBookSelect }) => {
             <img className="ui image" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
             <div className="content">
             <div className="ui buttons">
-                <button onClick={() => onBookSelect(book)} className="ui button" id="btn">View</button>
+                <a onClick={() => onBookSelect(book)} className="ui button" href={"/books/Detail"}id="btn">View</a>
                 <div className="or"></div>
-                <button className="ui brown button">Save</button>
+                <a className="ui brown button" href={"./books/:id"}>Save</a>
             </div>
                 <h2 className="header">{book.volumeInfo.title}</h2>
                 <h4>{book.volumeInfo.authors}</h4>

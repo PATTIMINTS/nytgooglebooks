@@ -11,7 +11,7 @@ function Nav() {
     <nav className="navbar navbar-light" id="blue" style={{ backgroundColor: "#637a9e" }}>
   <a className="navbar-brand" href="/" id="shadow" style={{ color: "#4e5868" }}>Google Books</a>
   <a className="navbar-brand" href="/">Search</a>
-  <a className="navbar-brand" id="view" href="/">View</a>
+  <a className="navbar-brand" id="view" href="/books/:id">View</a>
 
 </nav>
   );
