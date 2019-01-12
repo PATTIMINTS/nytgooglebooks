@@ -7,7 +7,7 @@ const Example = (props) => {
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">Google Book Search</h1>
-          <p className="lead">Books to search and save.</p>
+          <p className="lead">Books to search and save!</p>
         </Container>
       </Jumbotron>
     </div>
