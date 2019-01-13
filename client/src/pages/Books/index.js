@@ -9,6 +9,7 @@ import BookDetail from "../../components/BookDetail";
 
 
 
+
 class Books extends React.Component {
         state= { books: [], selectedBook: null };
 
@@ -34,16 +35,21 @@ class Books extends React.Component {
         };
     render(){
         return(
+
             <div>
             
             <div className="ui grid" id="center">
                 <div className="fourteen wide centered column">
             <Jumbotron />
             <SearchBar onFormSubmit={this.onTermSubmit} />
+            
+            <div className="col lg-12 md-10">
             <BookDetail book={this.state.selectedBook}/>
             
+        
             <BookList onBookSelect={this.onBookSelect}books={this.state.books} />
             
+            </div>
                 
             </div>
             

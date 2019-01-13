@@ -17,6 +17,55 @@
     
 }
 
-#btn {
+#bttn {
     margin-left: 60rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .infor {
+        position: absolute;
+      /* background-color: lightblue; */
+      width: 700px;
+       
+    }
+       #bttn {
+        position: relative;
+        margin-left: 35rem;
+        padding-top: 20px;
+        
+       } 
+
+       .book-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        cursor: pointer;
+  
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+    .infor {
+        
+      /* background-color: lightblue; */
+      width: 300px;
+      padding-bottom: 100px;
+      position: static;
+       
+    }
+       #bttn {
+        
+        margin-left: 0rem;
+        padding-top: 0px;
+        
+       } 
+
+       .book-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        cursor: pointer;
+        
+  
+}
+
 }
