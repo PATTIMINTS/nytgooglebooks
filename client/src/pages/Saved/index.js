@@ -69,7 +69,8 @@ class Books extends Component {
     books: [],
     title: "",
     author: "",
-    synopsis: ""
+    description: "",
+    image: ""
   };
 
   componentDidMount() {
@@ -117,7 +118,7 @@ class Books extends Component {
         <Row >
           <Col size="lg-12 md-12 sm-6">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Saved Books</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>
@@ -135,9 +136,7 @@ class Books extends Component {
             ) : (
               
               <h3>No Results to Display.</h3>
-              // <Link to={"/"}>
-              // <h4>-----Back to book search.</h4>
-              // </Link>
+              
             )}
             
              <Link to={"/"}>
