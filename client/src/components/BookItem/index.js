@@ -1,5 +1,6 @@
 import React from "react";
 import "../BookItem/BookItem.css";
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -15,9 +16,9 @@ const BookItem = ({ book, onBookSelect }) => {
             <img className="ui image" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
             <div className="content">
             <div className="ui buttons" id="bttn">
-                <a onClick={() => onBookSelect(book)} className="ui button" href={"/books/:id"}>View</a>
+                <NavLink onClick={() => onBookSelect(book)} className="ui button" to={"/books/:id"}>View</NavLink>
                 <div className="or"></div>
-                <a className="ui brown button" href={"/books/:id"}>Save</a>
+                <NavLink className="ui brown button" to={"/books/:id"}>Save</NavLink>
             </div>
                 <div className="infor">
                 <h2 className="header">{book.volumeInfo.title}</h2>
