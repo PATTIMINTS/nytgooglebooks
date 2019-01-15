@@ -104,7 +104,8 @@ class Books extends Component {
       API.saveBook({
         title: this.state.title,
         author: this.state.author,
-        synopsis: this.state.synopsis
+        description: this.state.description,
+        image: this.state.image
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
